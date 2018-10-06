@@ -17,6 +17,6 @@ int main(int argc, const *argv[])
 	int max = atoi(argv[1]);
 
 	int result = random_int(max);
-	printf("%d\n", resuult );
+	printf("%d\n", result );
 	return  EXIT_SUCCESS;
 }
