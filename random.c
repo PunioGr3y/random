@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int random_init(int max)
 {
 	return rand() % max;
 }
 
-int main(int argc, const *argv[])
+int main(int argc, char *argv[])
 {
 	/* code */
 	if(argc != 2){
@@ -16,7 +17,9 @@ int main(int argc, const *argv[])
 
 	int max = atoi(argv[1]);
 
-	int result = random_int(max);
+	srand(time(NULL));
+
+	int result = random_init(max);
 	printf("%d\n", result );
 	return  EXIT_SUCCESS;
 }
